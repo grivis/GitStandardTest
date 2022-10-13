@@ -1,0 +1,109 @@
+WORKING WITH GITHUB
+
+To download the entire repository into a Linux directory, we use
+
+'git', a Linux program that should be available by default
+
+Like this:
+
+git clone https://github.com/grivis/IgorTestMyBackup IgorTestGit
+
+This will create a local folder named IgorTestGit
+
+drwxrwxr-x 3 grivis grivis  4096 Oct  7 08:57 IgorTestGit
+
+
+(base) grivis@Grivis-Main:~/Documents/Active_2022_07/IgorJ/MyBackUp/IgorTestGit$ ls -l
+total 16
+-rw-rw-r-- 1 grivis grivis  673 Oct  7 08:57 AWS_2.txt
+-rw-rw-r-- 1 grivis grivis  834 Oct  7 08:57 AWS_3.txt
+-rw-rw-r-- 1 grivis grivis  227 Oct  7 08:57 AWS.txt
+-rw-rw-r-- 1 grivis grivis 2578 Oct  7 08:57 How2Git.txt
+
+
+If repeated, this command will not work again; a copy of the target directory will not be created
+
+When downloading the repository, git program will create .git directory inside the target directory!
+
+
+-------------------------------
+
+UPLOAD TO GITHUB
+
+If Git is not installed on your Linux
+
+sudo apt-get install git
+
+Configure GitHub
+
+git config --global user.name "user_name"
+git config --global user.email "email_id"
+
+You should have an account with GitHub
+
+Initialize a repository on your Linux machine
+
+git init IgorMainBackup
+
+This will create a directory.
+drwxrwxr-x 3 grivis grivis  4096 Oct  7 09:12 IgorMainBackup
+Then
+
+cd IgorMainBackup
+
+Create and or move files here, that you want to upload to GitHub
+
+git add .
+
+This will add all files and folders inside IgorMainBackup
+
+Commit (prepare) the upload
+
+git commit -m "Main backup Repo"
+
+Create a repository on GitHub with the same name
+e.g. IgorMainBackup
+
+Add origin
+
+git remote add origin https://github.com/grivis/IgorMainBackup.git
+
+https://github.com/grivis/IgorMainBackup
+
+Push the files into GitHub
+
+git push https://*****************@github.com/grivis/IgorMainBackup.git
+
+********************** is your GitHub personal token
+You can get it if you have a GitHub account
+
+Settings --> Developer Settings --> Personal access tokens. 
+
+After 'push' your files should be there!!
+
+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 generated October 7th
+
+git push https://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@github.com/grivis/IgorMainBackup.git
+
+
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+https://www.howtoforge.com/tutorial/install-git-and-github-on-ubuntu/
+
+ADDING NEW AND EDITED FILES
+
+git add --all
+
+This will add new files and files changed since the last commit
+
+git status
+
+
+git commit -m '<commit_message>'
+
+git push https://****************q@github.com/grivis/IgorMainBackup.git
+
+You will see changes in your GitHub repository
+
+https://support.atlassian.com/bitbucket-cloud/docs/add-edit-and-commit-to-source-files/
+
+https://mirrors.edge.kernel.org/pub/software/scm/git/docs/
